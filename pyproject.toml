@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61.0","pandas>=1.4.3","requests>=2.28.1"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "Uniswap-Fee-Calculator"
+version = "0.0.1"
+authors = [
+  { name="Johnny Chuang", email="johntzuyang@gmail.com" },
+]
+description = "A small example package"
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/ZooWallet/Uniswap-Fee-Calculator"
+"Bug Tracker" = "https://github.com/ZooWallet/Uniswap-Fee-Calculator/issues"
