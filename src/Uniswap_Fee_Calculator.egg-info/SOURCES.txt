@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/__init__.py
+src/config.py
+src/feeCalculator.py
+src/getFeeAPR.py
+src/Uniswap_Fee_Calculator.egg-info/PKG-INFO
+src/Uniswap_Fee_Calculator.egg-info/SOURCES.txt
+src/Uniswap_Fee_Calculator.egg-info/dependency_links.txt
+src/Uniswap_Fee_Calculator.egg-info/top_level.txt
