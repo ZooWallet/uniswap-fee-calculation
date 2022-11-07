@@ -9,7 +9,6 @@ from pathlib import Path
 # chain can be "Arbitrum", "Optimism", "Polygon"
 # pool is the pool address
 
-
 def fetchData(
         configData,
         subgraphURL,
@@ -36,8 +35,10 @@ def fetchData(
 
     cousorTime = startTime
     timeStep = 86400
-    scriptDir = Path(__file__).parent.absolute()
+    # scriptDir = Path(__file__).parent.absolute()
+    scriptDir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     rawDataFilePath = f'{scriptDir}/data/{ticker}_swap.txt'
+    print(rawDataFilePath)
     if force:
         if os.path.exists(rawDataFilePath):
             os.remove(rawDataFilePath)
@@ -83,7 +84,8 @@ def Raw2CSV(configData, switch=False):
     pool = configData['pool']
     ticker = configData['ticker']
 
-    scriptDir = Path(__file__).parent.absolute()
+    # scriptDir = Path(__file__).parent.absolute()
+    scriptDir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     file1 = open(f'{scriptDir}/data/{ticker}_swap.txt', 'r')
     lines = file1.readlines()
     if len(lines) != 0:
@@ -206,5 +208,3 @@ def getFeeAPR(configData, tickNumber, data):
     return {ticker: feeAPR}
 
 
-scriptDir = Path(__file__).parent.absolute()
-print(scriptDir)

@@ -3,7 +3,7 @@ import sys
 import pandas as pd 
 import os
 import time 
-sys.path.append('..')
+sys.path.append('../src')
 import config 
 import random
 import feeCalculator
