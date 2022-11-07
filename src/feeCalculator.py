@@ -204,3 +204,7 @@ def getFeeAPR(configData, tickNumber, data):
     feeAPR = culmulativeFee * 365 / backtestDays * 100
 
     return {ticker: feeAPR}
+
+
+scriptDir = Path(__file__).parent.absolute()
+print(scriptDir)
